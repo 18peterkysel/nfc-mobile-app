@@ -1,18 +1,21 @@
-package com.example.hlemisc.app13082017;
+package com.example.hlemisc.app13082017.CardList;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.example.hlemisc.app13082017.Adapter;
+import com.example.hlemisc.app13082017.CardDetail.CardDetailActivity;
+import com.example.hlemisc.app13082017.CardDetail.CardDetailFragment;
+import com.example.hlemisc.app13082017.R;
 
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
-public class CardListActivity extends Activity implements AdapterView.OnItemClickListener {
+public class CardListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private static final String[] _typesCards = new String[] {"ISIC","PLATOBNA KARTA", "ISIC"};
     private static final String[] _ownerCards = new String[] {"Peter Kysel","Peter Kysel 2", "Peter Kysel 3"};
     private ListView _listView;

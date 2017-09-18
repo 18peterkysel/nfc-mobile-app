@@ -1,4 +1,4 @@
-package com.example.hlemisc.app13082017;
+package com.example.hlemisc.app13082017.CardList;
 
 public class ListItem {
     private int _idImage;

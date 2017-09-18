@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CardListActivity">
+    tools:context=".CardList.CardListActivity"
+    android:background="#10988E" >
 
     <ListView
         android:id="@+id/card_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:alpha="1">
     </ListView>
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="186dp"
+        android:layout_height="178dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.5"
+        android:src="@drawable/isic_logo"
+        />
+
+</RelativeLayout>

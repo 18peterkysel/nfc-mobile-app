@@ -4,7 +4,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/cardDetailContainer"
-    tools:context=".CardDetailActivity"
+    android:background="#10988E"
+    tools:context=".CardDetail.CardDetailActivity"
     tools:ignore = "MergeRootFrame" >
+
+    <ImageView
+        android:layout_width="186dp"
+        android:layout_height="178dp"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:src="@drawable/isic_logo"
+        />
 
 </FrameLayout>

@@ -1,4 +1,4 @@
-package com.example.hlemisc.app13082017;
+package com.example.hlemisc.app13082017.CardDetail;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.hlemisc.app13082017.Dummy.DummyContent;
+import com.example.hlemisc.app13082017.R;
 
 public class CardDetailFragment extends Fragment {
     public static final String ARG_ITEM_ID = "item_id";

@@ -7,6 +7,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.hlemisc.app13082017.CardList.CardListActivity;
+
 public class WelcomeActivity extends AppCompatActivity {
     ImageView imageView;
 
@@ -15,11 +17,13 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.welcome_animation);
+        Animation animation_zoom_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.welcome_animation_zoom_in);
+        final Animation animation_zoom_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.welcome_animation_zoom_out);
         imageView = (ImageView) findViewById(R.id.imageView);
 
-        animation.setDuration(1000);
-        animation.setAnimationListener(new Animation.AnimationListener() {
+        animation_zoom_in.setDuration(2000);
+        animation_zoom_out.setDuration(1000);
+        animation_zoom_in.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
 
@@ -27,8 +31,24 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                finish();
-                startActivity(new Intent(getApplicationContext(), CardListActivity.class));
+                animation_zoom_out.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        finish();
+                        startActivity(new Intent(getApplicationContext(), CardListActivity.class));
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                imageView.setAnimation(animation_zoom_out);
             }
 
             @Override
@@ -36,6 +56,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
             }
         });
-        imageView.setAnimation(animation);
+        imageView.setAnimation(animation_zoom_in);
     }
 }

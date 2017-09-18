@@ -8,8 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.DayNight">
-        <activity android:label="@string/title_master_detail" android:name=".CardListActivity">
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" >
+        <activity
+            android:label="@string/title_master_detail"
+            android:name=".CardList.CardListActivity"
+            android:theme="@style/noAnimTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -18,13 +21,15 @@
         <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/title_item_detail" android:name=".CardDetailActivity"
-            android:parentActivityName=".CardListActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".CardListActivity"/>
+        <activity
+            android:label="@string/title_item_detail"
+            android:name=".CardDetail.CardDetailActivity"
+            android:parentActivityName=".CardList.CardListActivity"
+            android:theme="@style/noAnimTheme">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".CardList.CardListActivity"/>
         </activity>
     </application>
 

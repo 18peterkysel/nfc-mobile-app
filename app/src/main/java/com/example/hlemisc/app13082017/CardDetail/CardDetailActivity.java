@@ -1,10 +1,13 @@
-package com.example.hlemisc.app13082017;
+package com.example.hlemisc.app13082017.CardDetail;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import com.example.hlemisc.app13082017.CardList.CardListActivity;
+import com.example.hlemisc.app13082017.R;
 
 public class CardDetailActivity extends AppCompatActivity {
 
